@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module>
+  <!-- Inherit our applications main module.                      -->
+  <inherits name='com.edu.pj.uibinder.ToDoList' />
+
+  <!-- Specify the path to any remote services.                   -->
+  <servlet path="/ToDoList/greet" class="com.edu.pj.uibinder.server.GreetingServiceImpl" />
+
+</module>

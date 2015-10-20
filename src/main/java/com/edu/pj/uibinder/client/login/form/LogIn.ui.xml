@@ -1,0 +1,54 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+xmlns:m="urn:import:gwt.material.design.client.ui"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<ui:style>
+		body{
+			background: #fff;
+		}
+		.panel{
+			background: url("http://2.bp.blogspot.com/-x4D3EPELYRU/VMHu52a4qUI/AAAAAAAAHek/EmnIgqTtu_U/s0/fon116%2B2160x1920.png");
+			background-size: 100%;
+			padding: 0px !important;
+			padding-top: 40% !important;			
+		}
+		.fieldPanel{
+			background: white;
+			padding: 6%;
+		}
+		.imgProfile{
+			  margin-top: -120px;
+			  width: 40%;
+			  margin-left: 30%;
+			  border: 5px solid #fff;
+		}
+		.rowAction{
+			margin-top: 20px;
+		}
+	</ui:style>
+	<g:HTMLPanel>
+	<m:MaterialRow>
+		<m:MaterialColumn grid="s12 m4 l4" offset="l4" textColor="red">
+			<m:MaterialTitle title="Login" description="Please provide your account credentials."/>
+			<m:MaterialPanel padding="10" shadow="1"
+				stylePrimaryName="{style.panel}">
+				<m:MaterialPanel  stylePrimaryName="{style.fieldPanel}">				
+					<m:MaterialImage ui:field="imgProfile"
+						url="http://b.vimeocdn.com/ps/339/488/3394886_300.jpg"
+						addStyleNames="{style.imgProfile} z-depth-10"></m:MaterialImage>
+					<m:MaterialTextBox ui:field="txtEmail" type="email" placeholder="Email" icon="mdi-communication-email"></m:MaterialTextBox>
+					<m:MaterialTextBox ui:field="txtPwd" type="password" placeholder="Password" icon="mdi-action-lock"></m:MaterialTextBox>
+					<m:MaterialRow align="right">						
+						<m:MaterialButton ui:field="btnLogIn" tooltip="Click to Log In" tooltipLocation="top" icon="mdi-content-forward" iconPosition="right" waves="light">Log In</m:MaterialButton>
+						<m:MaterialButton ui:field="btnCancel" icon="mdi-content-clear" iconPosition="right" waves="light">Cancel</m:MaterialButton>																	
+					</m:MaterialRow>					
+					<m:MaterialRow align="right">	
+						<m:MaterialCheckBox type="filled">Keep Me Loged In</m:MaterialCheckBox>
+					</m:MaterialRow>
+				</m:MaterialPanel>
+			</m:MaterialPanel>			
+		</m:MaterialColumn>
+	</m:MaterialRow>
+		
+	</g:HTMLPanel>
+</ui:UiBinder> 
