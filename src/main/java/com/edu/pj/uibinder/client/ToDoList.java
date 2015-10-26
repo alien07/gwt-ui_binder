@@ -1,9 +1,11 @@
 package com.edu.pj.uibinder.client;
 
 import com.edu.pj.uibinder.client.login.form.LogIn;
+import com.edu.pj.uibinder.client.login.form.LogInPresenter;
 import com.google.gwt.core.client.EntryPoint;
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.user.client.ui.RootPanel;
+import com.google.web.bindery.event.shared.SimpleEventBus;
 
 /**
  * Entry point classes define <code>onModuleLoad()</code>.
@@ -29,11 +31,16 @@ public class ToDoList implements EntryPoint {
 	 */
 	public void onModuleLoad() {
 
+		SimpleEventBus eventBus = new SimpleEventBus();
+		LogIn loginView = new LogIn();
+		LogInPresenter logInPresenter = new LogInPresenter(loginView, eventBus);
+		// loginView.setPresenter(logInPresenter);
 		// Add the nameField and sendButton to the RootPanel
 		// Use RootPanel.get() to get the entire body element
-		RootPanel.get("nameFieldContainer").add(new LogIn());
+		// RootPanel.get("nameFieldContainer").add(loginView);
 		// RootPanel.get("sendButtonContainer").add(sendButton);
 		// RootPanel.get("errorLabelContainer").add(errorLabel);
-
+		// Start listening for events in the presenter
+		logInPresenter.start(RootPanel.get("nameFieldContainer"));
 	}
 }

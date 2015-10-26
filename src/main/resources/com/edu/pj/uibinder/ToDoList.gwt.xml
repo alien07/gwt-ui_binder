@@ -15,7 +15,8 @@
   <!-- <inherits name='com.google.gwt.user.theme.dark.Dark'/>     -->
 
   <!-- Other module inherits               -->
-  <inherits name="gwt.material.design.GwtMaterialDesign" />                       
+  <inherits name="gwt.material.design.GwtMaterialDesign" />   
+  <inherits name='com.google.web.bindery.event.EventBinder'/>
 
   <!-- Specify the app entry point class.                         -->
   <entry-point class='com.edu.pj.uibinder.client.ToDoList' />
